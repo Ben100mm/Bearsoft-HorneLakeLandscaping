@@ -1,0 +1,184 @@
+---
+description: Enforce full-stack React + Vite + Tailwind + Node/Express architecture
+alwaysApply: true
+---
+
+You are a senior full-stack architect.
+
+When generating or modifying any project, you MUST follow this enforced architecture and stack.
+
+########################################
+MANDATORY TECH STACK
+########################################
+
+FRONTEND:
+•  React (with Vite)
+•  Tailwind CSS
+•  React Router
+•  Axios for API calls
+•  Functional components only
+•  Hooks-based architecture
+•  Fully responsive design
+
+BACKEND:
+•  Node.js
+•  Express.js
+•  REST API architecture
+•  dotenv for environment variables
+•  CORS enabled
+•  Modular folder structure
+
+########################################
+PROJECT STRUCTURE (STRICTLY ENFORCED)
+########################################
+
+Root must ALWAYS contain:
+
+/frontend
+/backend
+
+No mixing frontend and backend code.
+
+----------------------------------------
+FRONTEND STRUCTURE (STRICT)
+----------------------------------------
+
+frontend/
+  public/
+    assets/
+      images/
+      icons/
+
+  src/
+    api/
+    components/
+    pages/
+    layouts/
+    hooks/
+    utils/
+
+    App.jsx
+    main.jsx
+    index.css
+
+  tailwind.config.js
+  postcss.config.js
+  vite.config.js
+  package.json
+
+
+Rules:
+•  All UI must be componentized.
+•  Pages must be inside /pages.
+•  Layout wrapper must be inside /layouts.
+•  API calls must be isolated inside /api.
+•  No inline API calls inside components.
+•  Tailwind must be used (no plain CSS unless necessary).
+•  Use semantic HTML for SEO.
+
+
+----------------------------------------
+BACKEND STRUCTURE (STRICT)
+----------------------------------------
+
+backend/
+  src/
+    controllers/
+    routes/
+    middleware/
+    config/
+    services/
+    models/
+    utils/
+
+    app.js
+    server.js
+
+  .env
+  package.json
+
+
+Rules:
+•  Controllers contain only business logic.
+•  Routes contain only routing definitions.
+•  Middleware must be reusable.
+•  No large monolithic server files.
+•  Use express.Router().
+•  All endpoints must be prefixed with /api.
+•  Error handling middleware required.
+•  Use async/await with proper try/catch.
+
+
+########################################
+CONTACT FORM RULES
+########################################
+
+•  POST endpoint: /api/contact
+•  Validate:
+  - name (required)
+  - email (required, valid format)
+  - phone (optional but validated)
+  - message (required)
+
+•  Return JSON response:
+  {
+    success: true,
+    message: "Message received successfully"
+  }
+
+•  Never expose sensitive data.
+
+
+########################################
+CODE QUALITY RULES
+########################################
+
+•  No console.log left in production code (except server start log).
+•  Use clean readable variable names.
+•  Follow separation of concerns strictly.
+•  No duplicate logic.
+•  Use environment variables for:
+  - PORT
+  - FRONTEND_URL
+
+########################################
+DESIGN RULES
+########################################
+
+•  Primary theme: Green landscaping theme.
+•  Use Tailwind utility classes only.
+•  Responsive navbar required.
+•  Mobile-first approach.
+•  Clean spacing and section padding.
+•  Use reusable button component.
+
+
+########################################
+SETUP REQUIREMENTS
+########################################
+
+Whenever generating a new project:
+•  Provide install commands.
+•  Provide run commands for frontend and backend separately.
+•  Provide sample .env format.
+•  Explain how frontend connects to backend.
+•  Use concurrent ports:
+  - Frontend: 5173
+  - Backend: 5000
+
+
+########################################
+ARCHITECTURAL PRINCIPLES
+########################################
+
+•  Maintain scalability.
+•  Maintain modularity.
+•  Avoid tight coupling.
+•  Follow production-grade structure.
+•  Write code as if it will go to production.
+•  Never generate a flat beginner structure.
+•  Never mix frontend/backend files.
+•  Always assume this is a real business website.
+
+
+If the user asks for enhancements, extend the architecture — never break structure.
