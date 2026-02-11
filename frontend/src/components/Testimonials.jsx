@@ -1,4 +1,5 @@
 import { FaStar } from 'react-icons/fa'
+import RevealOnScroll from './RevealOnScroll'
 
 const Testimonials = () => {
   const testimonials = [
@@ -25,17 +26,18 @@ const Testimonials = () => {
   return (
     <section className="section-padding bg-primary-50">
       <div className="container-custom">
-        <div className="text-center mb-12">
+        <RevealOnScroll className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             What Our Clients Say
           </h2>
           <p className="text-lg text-gray-600">
             Don't just take our word for it - hear from our satisfied customers
           </p>
-        </div>
+        </RevealOnScroll>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md p-6">
+            <RevealOnScroll key={index} delay={index * 100}>
+            <div className="bg-white rounded-lg shadow-md p-6">
               <div className="flex mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <FaStar key={i} className="text-yellow-400 text-xl" />
@@ -47,6 +49,7 @@ const Testimonials = () => {
                 <p className="text-sm text-gray-600">{testimonial.role}</p>
               </div>
             </div>
+            </RevealOnScroll>
           ))}
         </div>
       </div>

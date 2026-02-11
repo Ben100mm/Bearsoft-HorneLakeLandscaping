@@ -1,9 +1,11 @@
+import RevealOnScroll from './RevealOnScroll'
+
 const About = () => {
   return (
     <section className="section-padding">
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
+          <RevealOnScroll>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               About Horne Lake Landscaping
             </h2>
@@ -20,7 +22,8 @@ const About = () => {
               From initial design consultation to ongoing maintenance, we're committed to providing
               exceptional service and outstanding results.
             </p>
-          </div>
+          </RevealOnScroll>
+          <RevealOnScroll delay={100}>
           <div className="bg-primary-100 rounded-lg p-8">
             <div className="grid grid-cols-2 gap-6">
               <div className="text-center">
@@ -41,6 +44,7 @@ const About = () => {
               </div>
             </div>
           </div>
+          </RevealOnScroll>
         </div>
       </div>
     </section>
