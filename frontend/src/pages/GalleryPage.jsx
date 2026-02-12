@@ -64,8 +64,8 @@ const GalleryPage = () => {
                 className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gray-200 aspect-square"
               >
                 {/* Placeholder for image */}
-                <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary-100 to-primary-200">
-                  <FaImage className="text-6xl text-primary-400 group-hover:text-primary-600 transition-colors duration-300" />
+                <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300">
+                  <FaImage className="text-6xl text-gray-400 group-hover:text-gray-600 transition-colors duration-300" />
                 </div>
                 
                 {/* Overlay on hover */}

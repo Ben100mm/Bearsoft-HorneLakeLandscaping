@@ -8,11 +8,11 @@ const Hero = () => {
         className="absolute inset-0 bg-contain bg-no-repeat"
         style={{
           backgroundImage: "url('/assets/images/Landing 1.PNG')",
-          backgroundPosition: "50% 20%"
+          backgroundPosition: "right 20%"
         }}
       >
         {/* Overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-black/10 to-transparent"></div>
       </div>
 
       {/* Content */}
