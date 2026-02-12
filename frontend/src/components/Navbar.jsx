@@ -19,8 +19,15 @@ const Navbar = () => {
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="container-custom">
         <div className="flex justify-between items-center h-16 md:h-20">
-          <Link to="/" className="text-2xl md:text-3xl font-bold text-primary-600">
-            Horne Lake Landscaping
+          <Link to="/" className="flex items-center gap-3">
+            <img 
+              src="/assets/images/Horne Lake Landscaping Logo.png" 
+              alt="Horne Lake Landscaping Logo" 
+              className="h-10 md:h-12 w-auto"
+            />
+            <span className="text-2xl md:text-3xl font-bold text-primary-600">
+              Horne Lake Landscaping
+            </span>
           </Link>
 
           <div className="hidden md:flex space-x-8">

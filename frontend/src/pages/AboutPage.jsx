@@ -1,10 +1,22 @@
 const AboutPage = () => {
   return (
     <div className="pt-8">
-      <section className="section-padding bg-gradient-to-br from-primary-600 to-primary-800 text-white">
-        <div className="container-custom text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">About Horne Lake Landscaping</h1>
-          <p className="text-xl text-primary-100 max-w-2xl mx-auto">
+      <section className="relative min-h-[400px] md:min-h-[500px] flex items-center section-padding">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('/assets/images/Hornelake1.jpeg')"
+          }}
+        >
+          {/* Overlay for text readability */}
+          <div className="absolute inset-0 bg-black/60"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 container-custom text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">About Horne Lake Landscaping</h1>
+          <p className="text-xl text-white/90 max-w-2xl mx-auto">
             Your trusted partner in creating beautiful outdoor spaces
           </p>
         </div>

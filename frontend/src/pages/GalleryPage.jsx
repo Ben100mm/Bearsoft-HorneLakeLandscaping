@@ -21,10 +21,22 @@ const GalleryPage = () => {
 
   return (
     <div className="pt-8">
-      <section className="section-padding bg-gradient-to-br from-primary-600 to-primary-800 text-white">
-        <div className="container-custom text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Gallery</h1>
-          <p className="text-xl text-primary-100 max-w-2xl mx-auto">
+      <section className="relative min-h-[400px] md:min-h-[500px] flex items-center section-padding">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('/assets/images/Gallery.PNG')"
+          }}
+        >
+          {/* Overlay for text readability */}
+          <div className="absolute inset-0 bg-black/60"></div>
+        </div>
+
+        {/* Content */}
+        <div className="container-custom text-center relative z-10">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Our Gallery</h1>
+          <p className="text-xl text-white/90 max-w-2xl mx-auto">
             Explore our portfolio of completed landscaping projects and transformations
           </p>
         </div>
